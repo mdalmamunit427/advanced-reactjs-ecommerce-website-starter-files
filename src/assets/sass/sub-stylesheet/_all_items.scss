@@ -1,0 +1,1287 @@
+// All items 
+.category-item {
+    .category-inner {
+        box-shadow: 0 0 10px rgba($shadow-color, $alpha: .10);
+        @include border-radius(4px);
+        padding: 40px 30px;
+        @include transition($transition);
+        @extend %bg-white;
+        @include breakpoint(xxl) {
+            padding: 40px;
+        }
+        &:hover {
+            @include transform(translateY(-10px));
+            .category-content {
+                h6 {
+                    @extend %theme-color;
+                }
+            }
+        }
+        .category-thumb {
+            @extend %mb-15;
+            img {
+                @include border-radius(100%);
+            }
+        }
+        .category-content {
+            h6 {
+                font-weight: 500;
+                &:hover {
+                    @extend %theme-color;
+                }
+            }
+            h4 {
+                &:hover {
+                    @extend %theme-color;
+                }
+            }
+            span {
+                font-weight: 500;
+                font-size: $fs-h6;
+                @extend %d-block;
+            }
+        }
+    }
+}
+
+
+// course-item
+.course-item {
+    .course-inner {
+        padding: 15px;
+        @include border-radius(4px);
+        box-shadow: 0 0 10px rgba($shadow-color, $alpha: .10);
+        @extend %bg-white;
+        &:hover {
+            .course-thumb {
+                img {
+                    @include transform(scale(1.05));
+                }
+            }
+            .course-content {
+                h4 {
+                    @extend %theme-color;
+                }
+            }
+        }
+        .course-thumb {
+            @extend %hidden;
+            img {
+                @extend %w-100;
+            }
+        }
+        .course-content {
+            padding: 30px 15px 0;
+            @extend %rel;
+            .course-category {
+                @extend %flex;
+                @include breakpoint(sm) {
+                    margin-bottom: 15px;
+                }
+                .course-cate {
+                    margin-right: 10px;
+                    @include breakpoint(max-lg) {
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        padding: 3px 15px;
+                        padding-left: 25px;
+                        @extend %bg-theme;
+                        @extend %white-color;
+                        @include border-radius(4px);
+                        font-weight: 500;
+                        @extend %rel;
+                        @include breakpoint(max-xxl) {
+                            font-size: small;
+                        }
+                        &::before {
+                            @extend %abs;
+                            width: 6px;
+                            height: 6px;
+                            @include border-radius(100%);
+                            background: rgba($white-color, $alpha: .50);
+                            top: 50%;
+                            left: 10px;
+                            @include transform(translateY(-50%));
+                        }
+                    }
+                }
+                .course-reiew {
+                    .ratting {
+                        i {
+                            font-size: $fs-base;
+                            @extend %theme-color;
+                        }
+                    }
+                    .ratting-count {
+                        @extend %ml-10;
+                    }
+                }
+            }
+            h4 {
+                @extend %text-clamp-2;
+            }
+            .course-details {
+                @extend %flex;
+                @extend %justify-between;
+                margin: 0px 0 15px;
+                .couse-count, .couse-topic {
+                    font-size: $fs-h6;
+                    i {
+                        @extend %theme-color;
+                        @extend %mr-5;
+                    }
+                }
+            }
+            .course-footer {
+                @extend %flex;
+                @extend %justify-between;
+                @extend %align-items-center;
+                border-top: 1px solid $border-color;
+                @extend %pt-15;
+                .course-author {
+                    @extend %m-0;
+                    img {
+                        @extend %mr-5;
+                    }
+                    .ca-name {
+                        font-size: $fs-h6;
+                        font-weight: 500;
+                        &:hover {
+                            @extend %theme-color;
+                        }
+                    }
+                }
+            }
+        }
+        .course-price {
+            @extend %abs;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            @extend %text-center;
+            @include border-radius(100%);
+            @extend %bg-theme;
+            @extend %white-color;
+            font-weight: 700;
+            font-size: $fs-h5;
+            right: 20px;
+            top: -30px;
+        }
+    }
+    &.style-2 {
+        .course-inner {
+            @extend %flex;
+            @extend %align-items-center;
+            .course-thumb {
+                @extend %rel;
+                @extend %w-100;
+                @include breakpoint(sm) {
+                    width: 40%;
+                }
+                @include breakpoint(lg) {
+                    @include breakpoint(max-xl) {
+                        width: 100%;
+                    }
+                }
+                .course-price {
+                    top: 10px;
+                    right: auto;
+                    left: 10px;
+                }
+            }
+            .course-content {
+                @extend %p-15;
+                @include breakpoint(sm) {
+                    width: 60%;
+                }
+                @include breakpoint(lg) {
+                    @include breakpoint(max-xl) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.style-3 {
+        .course-inner {
+            @extend %p-0;
+            @include border-radius(6px);
+            @extend %hidden;
+            .course-thumb {
+                @extend %rel;
+                .course-info {
+                    @extend %flex;
+                    @extend %abs;
+                    bottom: 10px;
+                    @extend %w-100;
+                    @extend %justify-center;
+                    z-index: 9;
+                    li {
+                        margin: 3px;
+                        span {
+                            @extend %d-inline-block;
+                            padding: 5px 20px;
+                            @include border-radius(3px);
+                            @extend %bg-white;
+                            &.course-name {
+                                font-weight: 700;
+                                @extend %title-color;
+                            }
+                            &.price {
+                                @extend %bg-theme;
+                                @extend %white-color;
+                            }
+                            &.ratting {
+                                @extend %theme-color;
+                                font-size: small;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+                &::after {
+                    @extend %abs;
+                    @extend %w-100;
+                    @extend %h-50;
+                    left: 0;
+                    bottom: 0;
+                    background-image: linear-gradient(to bottom, #05193700, #05193747, #05193794, #051937c4, #051937db);
+                }
+            }
+            .course-content {
+                @extend %p-30;
+                padding-bottom: 40px;
+                .course-details {
+                    @extend %justify-center;
+                    @extend %mb-25;
+                    div {
+                        @extend %mr-15;
+                        &:last-child {
+                            @extend %mr-0;
+                        }
+                    }
+                }
+                .lab-btn {
+                    @extend %bg-white;
+                    border: 1px solid $border-color;
+                    span {
+                        @extend %theme-color;
+                    }
+                    &:hover {
+                        @extend %bg-theme;
+                        border-color: transparent;
+                        span {
+                            @extend %white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-4 {
+        .course-inner {
+            @extend %p-0;
+            @include border-radius(4px);
+            box-shadow: 0 0 10px rgba($shadow-color, $alpha: .10);
+            @extend %bg-white;
+            &:hover {
+                .course-thumb {
+                    img {
+                        @include transform(scale(1.05));
+                    }
+                }
+                .course-content {
+                    h5 {
+                        @extend %yellow-color;
+                    }
+                }
+            }
+            .course-thumb {
+                @extend %rel;
+                img {}
+                .course-category {
+                    @extend %flex;
+                    @extend %mb-0;
+                    @extend %justify-between;
+                    @extend %abs;
+                    @extend %w-100;
+                    padding: 5px 15px;
+                    left: 0;
+                    bottom: 0;
+                    background: rgba($yellow, $alpha: .85);
+                    .course-cate {
+                        margin-right: 10px;
+                        @include breakpoint(max-lg) {
+                            margin-bottom: 10px;
+                        }
+                        a {
+                            @extend %p-0;
+                            @extend %title-color;
+                            font-weight: 700;
+                            &::before {
+                                @extend %d-none;
+                            }
+                        }
+                    }
+                    .course-reiew {
+                        .ratting {
+                            i {
+                                @extend %title-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .course-content {
+                padding: 20px 15px 5px;
+                h5 {
+                    @extend %mb-15;
+                }
+                .course-footer {
+                    @extend %pt-5;
+                    .course-price {
+                        position: static;
+                        @extend %yellow-color;
+                        font-size: $fs-h5;
+                        font-weight: 500;
+                        width: auto;
+                        height: auto;
+                        line-height: 1;
+                        background: transparent;
+                        @include border-radius(0);
+                    }
+                    .ca-name {
+                        &:hover {
+                            @extend %yellow-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-5 {
+        .course-inner {
+            @extend %p-0;
+            @extend %bg-white;
+            @extend %hidden;
+            &:hover {
+                .course-content {
+                    h5 {
+                        @extend %yellow-color;
+                    }
+                }
+            }
+            .course-thumb {
+                @extend %rel;
+                img {}
+            }
+            .course-content {
+                padding: 30px 23px 20px;
+                h5 {
+                    @extend %mb-5;
+                }
+                .course-cate {
+                    @extend %mb-20;
+                    @extend %d-block;
+                }
+                .course-footer {
+                    @extend %pt-15;
+                    @extend %justify-start;
+                    .ratting {
+                        @extend %yellow-color;
+                        font-size: $fs-base;
+                        @extend %pr-15;
+                        border-right: 1px solid $border-color;
+                    }
+                    .course-price {
+                        position: static;
+                        @extend %title-color;
+                        font-size: $fs-h6;
+                        font-weight: 700;
+                        width: auto;
+                        height: auto;
+                        line-height: 1;
+                        background: transparent;
+                        @include border-radius(0);
+                        @extend %ml-15;
+                        del {
+                            @extend %desc-color;
+                            @extend %mr-10;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// instructor-item
+.instructor-item {
+    @extend %bg-white;
+    @include border-radius(4px);
+    box-shadow: 0 0 10px rgba($shadow-color, $alpha: .10);
+    @include transition($transition);
+    &:hover {
+        @include transform(translateY(-10px));
+        .instructor-inner {
+            .instructor-content {
+                h4 {
+                    @extend %theme-color;
+                }
+            }
+        }
+    }
+    .instructor-inner {
+        padding: 30px 15px 20px;
+        @extend %text-center;
+        .instructor-thumb {
+            @extend %mb-20;
+            img {
+                @include border-radius(100%);
+            }
+        }
+        .instructor-content {
+            h4 {
+                @extend %mb-5;
+            }
+            p {
+                @extend %mb-5;
+            }
+            .ratting {
+                i {
+                    font-size: $fs-base;
+                    @extend %theme-color;
+                }
+            }
+        }
+    }
+    .instructor-footer {
+        border-top: 1px solid $border-color;
+        @extend %p-15;
+        ul {
+            li {
+                i {
+                    @extend %mr-5;
+                }
+            }
+        }
+    }
+    &.style-2 {
+        box-shadow: 0 2px 4px rgba($title-color, $alpha: .06);
+        &:hover {
+            .instructor-inner {
+                .instructor-content {
+                    h4 {
+                        @extend %yellow-color;
+                    }
+                }
+            }
+        }
+        .instructor-inner {
+            @extend %text-left;
+            @extend %flex;
+            @extend %align-items-center;
+            @extend %p-30;
+            .instructor-thumb {
+                @extend %w-100;
+                @include breakpoint(sm) {
+                    width: 30%;
+                    margin-bottom: 0;
+                }
+                @include breakpoint(lg) {
+                    width: 50%;
+                }
+                img {
+                    @include border-radius(6px);
+                    @include breakpoint(max-sm) {
+                        width: 100%;
+                    }
+                }
+            }
+            .instructor-content {
+                @extend %w-100;
+                @include breakpoint(sm) {
+                    width: 70%;
+                    padding-left: 30px;
+                }
+                @include breakpoint(lg) {
+                    width: 50%;
+                }
+                h4 {
+                    @extend %mb-5;
+                }
+                .social-icons {
+                    li {
+                        a {
+                            @include border-radius(3px);
+                        }
+                    }
+                }
+                .ins-info {
+                    margin: 10px 0 20px;
+                    li {
+                        i {
+                            @extend %yellow-color;
+                            @extend %mr-5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// stu-feed-item
+.stu-feed-item {
+    &:last-child {
+        .stu-feed-inner {
+            @extend %mb-0;
+        }
+    }
+    .stu-feed-inner {
+        @include border-radius(4px);
+        box-shadow: 0 5px 10px rgba($shadow-color, $alpha: .10);
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        @extend %bg-white;
+        @include breakpoint(sm) {
+            padding: 10px 30px;
+        }
+        .stu-feed-top {
+            @extend %flex;
+            @extend %justify-between;
+            padding: 15px 0;
+            border-bottom: 1px solid $border-color;
+            .sft-left {
+                @extend %flex;
+                .sftl-thumb {
+                    @extend %mr-10;
+                    img {
+                        @include border-radius(100%);
+                    }
+                }
+                .sftl-content {
+                    h6 {
+                        @extend %mb-0;
+                        &:hover {
+                            @extend %theme-color;
+                        }
+                    }
+                    span {
+                        @extend %d-block;
+                        font-size: $fs-h6;
+                    }
+                }
+            }
+            .sft-right {
+                .ratting {
+                    i {
+                        font-size: $fs-base;
+                        @extend %theme-color;
+                    }
+                }
+            }
+        }
+        .stu-feed-bottom {
+            padding: 20px 0 10px;
+            p {
+                @extend %mb-0;
+                font-size: $fs-h6;
+            }
+        }
+    }
+}
+
+// post-item
+.post-item {
+    .post-inner {
+        @extend %p-15;
+        @extend %bg-white;
+        @include border-radius(4px);
+        box-shadow: 0 5px 10px rgba($title-color, $alpha: .10);
+        @include transition($transition);
+        &:hover {
+            @include transform(translateY(-10px));
+            .post-content {
+                h4 {
+                    @extend %theme-color;
+                }
+            }
+        }
+        .post-thumb {
+            a {
+                @extend %d-block;
+                img {
+                    @extend %w-100;
+                }
+            }
+        }
+        .post-content {
+            @extend %p-15;
+            padding-top: 20px;
+            h4 {
+                @extend %text-clamp-2;
+            }
+            .meta-post {
+                @extend %mb-15;
+                ul {
+                    @extend %flex;
+                    @extend %align-items-center;
+                    li {
+                        @extend %mr-15;
+                        &:last-child {
+                            @extend %mr-0;
+                        }
+                        i {
+                            @extend %mr-5;
+                            @extend %theme-color;
+                        }
+                        a {
+                            font-weight: 500;
+                            &:hover {
+                                @extend %theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                @extend %mb-5;
+                font-size: $fs-h6;
+            }
+        }
+        .post-footer {
+            @extend %flex;
+            @extend %justify-between;
+            @extend %align-items-center;
+            margin: 0 15px;
+            padding-top: 15px;
+            border-top: 1px solid $border-color;
+            .pf-right {
+                @extend %rel;
+                i {
+                    font-size: $fs-h4;
+                }
+                .comment-count {
+                    @extend %abs;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    top: -5px;
+                    left: 5px;
+                    @include border-radius(100%);
+                    @extend %text-center;
+                    @extend %text-bold;
+                    font-size: 12px;
+                    @extend %white-color;
+                    @extend %bg-theme;
+                    @extend %d-inline-block;
+                    box-shadow: 0 3px 10px rgba($title-color, $alpha: .10);
+                }
+            }
+        }
+    }
+    &.style-2 {
+        .post-inner {
+            @extend %p-0;
+            &:hover {
+                @include transform(translateY(0px));
+                .post-thumb {
+                    a {
+                        img {
+                            @include transform(scale(1.2));
+                        }
+                    }
+                }
+                .post-content {
+                    a>h2, h3 {
+                        @extend %theme-color;
+                    }
+                }
+            }
+            .post-thumb {
+                @extend %hidden;
+            }
+            .post-content {
+                @extend %p-30;
+                h3 {
+                    @extend %text-clamp-2;
+                }
+                a>h2 {
+                    @extend %text-clamp-1;
+                }
+                h2 {
+                    &.not-ruselt {
+                        font-weight: 400;
+                    }
+                    &.opps {
+                        margin: 10px 0 0;
+                        @extend %theme-color;
+                        @include breakpoint(lg) {
+                            font-size: 60px;
+                        }
+                    }
+                }
+                p {
+                    @extend %mb-25;
+                }
+            }
+        }
+    }
+    &.style-3 {
+        .post-inner {
+            @extend %p-0;
+            box-shadow: none;
+            @include breakpoint(max-sm) {
+                margin-bottom: 15px;
+            }
+            &:hover {
+                @include transform(translateY(0px));
+                .post-thumb {
+                    a {
+                        img {
+                            @include transform(scale(1.2));
+                        }
+                    }
+                }
+            }
+            .post-thumb {
+                @extend %hidden;
+            }
+            .post-content {
+                @extend %p-0;
+                @extend %pt-20;
+                p {
+                    @extend %mb-25;
+                }
+                .lab-btn {
+                    background: transparent;
+                    border: 2px solid $theme-color;
+                    span {
+                        @extend %theme-color;
+                    }
+                    &:hover {
+                        @extend %bg-theme;
+                        span {
+                            @extend %white-color
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.slider-post {
+        .post-inner {
+            &:hover {
+                .post-thumb {
+                    &.post-thumb-slider {
+                        .post-thumb-slider-next {
+                            left: 10px;
+                        }
+                        .post-thumb-slider-prev {
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+            .post-thumb {
+                &.post-thumb-slider {
+                    @extend %flex;
+                    @extend %rel;
+                    img {
+                        width: 100%;
+                    }
+                    .post-thumb-slider-next, .post-thumb-slider-prev {
+                        @extend %abs;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        background: $white-color;
+                        color: $title-color;
+                        z-index: 1;
+                        text-align: center;
+                        top: 50%;
+                        outline: none;
+                        cursor: pointer;
+                        transform: translateY(-50%);
+                        @include border-radius(100%);
+                        @include transition($transition);
+                        &:hover, .active {
+                            background: $theme-color;
+                            color: $white-color;
+                        }
+                    }
+                    .post-thumb-slider-next {
+                        left: -10%;
+                    }
+                    .post-thumb-slider-prev {
+                        right: -10%;
+                    }
+                }
+            }
+        }
+    }
+    &.video-post {
+        .post-thumb {
+            @extend %rel;
+            .video-button {
+                @extend %center;
+            }
+        }
+    }
+    &.qute-post {
+        .post-inner {
+            .post-thumb {
+                height: 190px;
+                @extend %rel;
+                @extend %bg-primary;
+                @include breakpoint(sm) {
+                    height: 320px;
+                }
+                .qute-content {
+                    @extend %center;
+                    @extend %w-100;
+                    @extend %text-center;
+                    padding: 20px;
+                    h4 {
+                        line-height: 1.5;
+                        @extend %mt-15;
+                        @extend %mb-0;
+                        @extend %white-color;
+                        @include breakpoint(max-md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// count-item
+.count-item {
+    .count-inner {
+        @extend %text-center;
+        padding: 5px 30px;
+        @include breakpoint(sm) {
+            padding: 30px;
+        }
+        .count-content {
+            p {
+                @extend %mb-0;
+            }
+        }
+        &:hover {
+            .count-icon {
+                &::before {
+                    -webkit-animation: circle-2 1.05s infinite;
+                    -moz-animation: circle-2 1.05s infinite;
+                    -ms-animation: circle-2 1.05s infinite;
+                    -o-animation: circle-2 1.05s infinite;
+                    animation: circle-2 1.05s infinite;
+                }
+                &::after {
+                    -webkit-animation: circle-2 1.08s infinite;
+                    -moz-animation: circle-2 1.08s infinite;
+                    -ms-animation: circle-2 1.08s infinite;
+                    -o-animation: circle-2 1.08s infinite;
+                    animation: circle-2 1.08s infinite;
+                }
+            }
+        }
+        .count-icon {
+            @extend %rel;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 30px;
+            i {
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+                font-size: $fs-h3;
+                @include border-radius(100%);
+                @extend %text-center;
+                @extend %bg-theme;
+                @extend %white-color;
+                @extend %d-inline-block;
+                @extend %rel;
+                z-index: 1;
+            }
+            &::after, &::before {
+                @extend %center;
+                @include border-radius(100%);
+            }
+            &::before {
+                width: calc(100% + 24px);
+                height: calc(100% + 24px);
+                background: rgba($theme-color, $alpha: .1);
+            }
+            &::after {
+                width: calc(100% + 12px);
+                height: calc(100% + 12px);
+                background: rgba($theme-color, $alpha: .2);
+            }
+        }
+    }
+}
+
+// achieve-item
+.achieve-item {
+    .achieve-inner {
+        @extend %flex;
+        @extend %justify-between;
+        padding: 30px;
+        @extend %bg-white;
+        @extend %rel;
+        @extend %hidden;
+        box-shadow: 0 5px 10px rgba($title-color, $alpha: .10);
+        .achieve-thumb {
+            @extend %mb-20;
+            @include breakpoint(sm) {
+                width: 65%;
+                position: absolute;
+                bottom: 0;
+                right: -60px;
+                margin-bottom: 0;
+            }
+        }
+        .achieve-content {
+            @include breakpoint(sm) {
+                width: 60%;
+            }
+            p {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+// skill item
+.skill-item {
+    .skill-inner {
+        @extend %flex;
+        @extend %p-15;
+        @extend %bg-white;
+        @extend %align-items-center;
+        @include transition($transition);
+        @include border-radius(4px);
+        @include breakpoint(lg) {
+            @include breakpoint(max-xl) {
+                text-align: center;
+            }
+        }
+        &:hover {
+            @include transform(translateY(-5px));
+            box-shadow: 0 5px 10px rgba($white-color, $alpha: .50);
+        }
+        .skill-thumb {
+            @extend %mr-15;
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .skill-content {
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    width: 100%;
+                }
+            }
+            h5 {
+                @extend %mb-5;
+            }
+            p {
+                @extend %mb-0;
+            }
+        }
+    }
+}
+
+// contact-item
+.contact-item {
+    @extend %flex;
+    @extend %bg-white;
+    @extend %mb-10;
+    @extend %align-items-center;
+    @include border-radius(4px);
+    padding: 20px 30px;
+    box-shadow: 0 0px 10px rgba($shadow-color, $alpha: .10);
+    .contact-thumb {
+        max-width: 50px;
+        @extend %text-center;
+    }
+    .contact-content {
+        width: calc(100% - 50px);
+        @extend %pl-15;
+        .title {
+            @extend %mb-5;
+        }
+        p {
+            @extend %mb-0;
+        }
+    }
+}
+
+// event-item
+.event-item {
+    .event-inner {
+        @include breakpoint(max-sm) {
+            margin-bottom: 15px;
+        }
+        &:hover {
+            .event-thumb {
+                img {
+                    @include transform(scale(1.05));
+                }
+            }
+            .event-content {
+                .event-content-info {
+                    h3, h5 {
+                        @extend %theme-color;
+                    }
+                }
+            }
+        }
+        .event-thumb {
+            @extend %hidden;
+            @include border-radius(4px);
+            img {
+                @extend %w-100;
+            }
+        }
+        .event-content {
+            @extend %flex;
+            @extend %justify-between;
+            @extend %p-30;
+            .event-date-info {
+                width: 95px;
+                .edi-box {
+                    padding: 15px 10px;
+                    border: 2px solid $theme-color;
+                    @extend %text-center;
+                    @include border-radius(4px);
+                    @include breakpoint(max-sm) {
+                        margin-bottom: 10px;
+                    }
+                    h4 {
+                        @extend %rel;
+                        @extend %pb-15;
+                        &::after {
+                            @extend %abs;
+                            width: 20px;
+                            height: 2px;
+                            border-bottom: 2px dotted $border-color;
+                            bottom: 0;
+                            left: 50%;
+                            border-width: 5px;
+                            @include transform(translateX(-50%));
+                        }
+                    }
+                    p {
+                        @extend %mb-0;
+                        font-size: $fs-base;
+                    }
+                }
+            }
+            .event-content-info {
+                @extend %w-100;
+                @include breakpoint(sm) {
+                    width: calc(100% - 110px);
+                }
+                h3, h5 {
+                    @include transition($transition);
+                }
+                ul {
+                    @extend %flex;
+                    li {
+                        @extend %mr-15;
+                        &:last-child {
+                            @extend %mr-0;
+                        }
+                        i {
+                            @extend %mr-5;
+                            @extend %theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-2 {
+        @extend %bg-white;
+        .event-inner {
+            border-right: 1px solid $ash-color;
+            .event-thumb {
+                @include border-radius(0px);
+                img {}
+            }
+            .event-content {
+                @extend %d-block;
+                @extend %p-0;
+                @extend %text-center;
+                h5 {
+                    padding: 10px 0;
+                    @extend %bg-yellow;
+                    @extend %mb-30;
+                }
+                >span {
+                    @extend %d-block;
+                    @extend %mb-20;
+                }
+                ul {
+                    @extend %mb-20;
+                    li {
+                        padding: 5px 0;
+                    }
+                }
+                .lab-btn {
+                    @extend %mb-30;
+                    @extend %bg-yellow;
+                    span {
+                        @extend %title-color;
+                    }
+                    &:hover {
+                        box-shadow: 0 5px 10px rgba($yellow, $alpha: .50);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// client-item
+.client-item {
+    .client-inner {
+        @extend %text-center;
+        @include border-radius(6px);
+        @extend %bg-white;
+        padding: 50px 30px;
+        .client-thumb {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            border: 2px solid $theme-color;
+            @include border-radius(100%);
+            @extend %hidden;
+        }
+        .client-content {
+            p {
+                line-height: 1.5;
+            }
+            .client-info {
+                @extend %mt-30;
+                .client-name {
+                    @extend %mb-0;
+                }
+                .client-degi {
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+// feature item
+.feature-item {
+    .feature-inner {
+        padding: 50px 30px;
+        box-shadow: 0 2px 4px rgba($title-color, $alpha: .10);
+        @include border-radius(3px);
+        @extend %flex;
+        @extend %align-items-center;
+        @extend %bg-white;
+        @include transition($transition);
+        @include breakpoint(max-sm) {
+            text-align: center;
+        }
+        @include breakpoint(lg) {
+            @include breakpoint(max-xl) {
+                text-align: center;
+            }
+        }
+        &:hover {
+            box-shadow: 0 24px 46px rgba($title-color, $alpha: .12);
+            .feature-content {
+                a {
+                    h5 {
+                        @extend %theme-color;
+                    }
+                }
+            }
+        }
+        .feature-thumb {
+            @extend %mb-20;
+            width: 100%;
+            @include breakpoint(sm) {
+                margin-right: 20px;
+                margin-bottom: 0;
+                width: auto;
+            }
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+            }
+        }
+        .feature-content {
+            @include breakpoint(max-sm) {
+                width: 100%;
+            }
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    width: 100%;
+                }
+            } 
+            a {
+                @extend %d-block;
+                h5 {
+                    span {
+                        @include breakpoint(sm) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .lab-btn-text {
+                &:hover {
+                    span {
+                        @extend %ml-10;
+                        opacity: 1;
+                    }
+                }
+                span {
+                    width: 20px;
+                    height: 2px;
+                    margin-left: -15px;
+                    opacity: 0;
+                    @extend %rel;
+                    @extend %bg-theme;
+                    @extend %d-inline-block;
+                    @include transform(translateY(-4px));
+                    @include transition($transition);
+                    &::after, &::before {
+                        @extend %abs;
+                        width: 10px;
+                        height: 2px;
+                        right: 0;
+                        @extend %bg-theme;
+                    }
+                    &::after {
+                        transform: rotate( -45deg ) translateY(4px);
+                    }
+                    &::before {
+                        transform: rotate( 45deg ) translateY(-4px);
+                    }
+                }
+            }
+        }
+    }
+}

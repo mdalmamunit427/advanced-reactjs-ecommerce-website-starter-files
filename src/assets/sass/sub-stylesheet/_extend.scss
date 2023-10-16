@@ -1,0 +1,983 @@
+/*! @@@@@@@@@@@@@@@@@@@@@@
+
+Template Name: Edukon
+Template URI: https://themeforest.net/user/CodexCoder
+Author: CodexCoder
+Author URI: https://themeforest.net/user/CodexCoder
+Description: Description
+Version: 1.0.0
+Text Domain: edukon
+Tags: academy, children, education, institute, kids, kids care, kids care home, kids school, kinder garden, kindergarten, nursery, play school, pre-school, responsive
+
+@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* @@@@@@@@@@@@@@@@@@@@@@
+>>> TABLE OF CONTENTS START:
+
+01. Normalize CSS
+02. Global CSS
+03. Header 
+	* Style-1
+	* Style-2
+	* Style-3
+	* Mobile Menu
+04. Banner 
+	* Style-1
+	* Style-2
+	* Style-3
+05. Page Header
+  	* Style-1
+06. Feature Section
+07. About Section
+	* Style-1
+	* Style-2
+	* Style-3
+08. Category Section
+	* Style-1
+	* Style-2
+	* Style-3
+	* Style-4
+09. course Section
+	* Style-1
+	* Style-2
+	* Style-3
+	* Style-4
+10. Course Single Section
+11. Event Section
+	* Style-1
+	* Style-2
+12. Instructor Section
+13. Testimonial Section
+	* Style-1
+	* Style-2
+	* Style-3
+14. Sponsor Section
+15. Newsletter Section
+16. Counterup Section
+17. Countdown Section
+18. Offer Section
+19. Contact Section
+20. Faq Section
+21. Fore Zero
+22. Blog
+	* Style-1
+	* Style-2
+	* Style-3
+	* Blog Single
+23. Widget
+24. Shop Page
+  * Shop Single
+  * cart Page
+25. Services Page
+26. Service Single Page & etc.
+
+
+
+>>> TABLE OF CONTENTS END:
+@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+
+
+/* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
+%flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+%flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+
+%rel {
+    position: relative;
+}
+
+%abs {
+    position: absolute;
+    content: "";
+}
+%position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%mp-0 {
+    padding: 0;
+    margin: 0;
+}
+
+%hidden {
+    overflow: hidden;
+}
+
+%pointer {
+    cursor: pointer;
+}
+
+%w-100 {
+    width: 100%;
+}
+%w-50 {
+    width: 50%;
+}
+%w-auto {
+    width: auto;
+}
+
+%h-100 {
+    height: 100%;
+}
+%h-50 {
+    height: 50%;
+}
+
+%text-bold {
+    font-weight: 700;
+}
+
+%text-regular {
+    font-weight: 400;
+}
+
+%center {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+%justify-center {
+    justify-content: center;
+}
+
+%justify-between {
+    justify-content: space-between;
+}
+
+%justify-start {
+    justify-content: flex-start;
+}
+%justify-end {
+    justify-content: flex-end;
+}
+
+%align-items-center {
+    align-items: center;
+}
+%align-items-start {
+    align-items: flex-start;
+}
+%align-items-end {
+    align-items: flex-end;
+}
+%border-none {
+    border: none;
+}
+%outline-none {
+    outline: none;
+}
+
+
+
+%d-block {
+    display: block;
+}
+%d-none {
+    display: none;
+}
+
+%d-inline-block {
+    display: inline-block;
+}
+
+%border-radius-2 {
+    border-radius: 2px;
+}
+
+/* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
+
+%text-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @extend %hidden;
+    text-overflow: ellipsis;
+}
+
+%text-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    @extend %hidden;
+    text-overflow: ellipsis;
+}
+
+%text-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    @extend %hidden;
+    text-overflow: ellipsis;
+}
+
+/* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
+%white-color {
+    color: $white-color;
+}
+
+%black-color {
+    color: $black-color;
+}
+
+%bg-white {
+    background-color: $white-color;
+}
+
+%bg-color {
+    background-color: $body-color;
+}
+
+%title-color {
+    color: $title-color;
+}
+
+%bg-title {
+    background: $title-color;
+}
+
+%theme-color {
+    color: $theme-color;
+}
+%primary-color {
+    color: $primary-color;
+}
+
+%bg-theme {
+    background: $theme-color;
+}
+
+%bg-primary {
+    background: $primary-color;
+}
+
+%border-color {
+    color: $border-color;
+}
+
+%bg-border {
+    background: $border-color;
+}
+
+%desc-color {
+    color: $desc-color;
+}
+
+%bg-desc {
+    background: $desc-color;
+}
+
+%ash-color {
+    color: $ash-color;
+}
+
+%bg-ash {
+    background: $ash-color;
+}
+
+%border-color {
+    border-color: $border-color;
+}
+
+%border-color-theme {
+    border-color: $theme-color;
+}
+
+%border-color-title {
+    border-color: $title-color;
+}
+
+
+
+
+
+%text-center {
+    text-align: center;
+}
+%text-left {
+    text-align: left;
+}
+
+%text-right {
+    text-align: right;
+}
+%text-capitalize {
+    text-transform: capitalize;
+}
+%text-uppercase {
+    text-transform: uppercase;
+}
+
+%list-none {
+    list-style: none;
+}
+
+/* @@@@@@@@@@@@@  Extend Property Margin 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
+%m-0 {
+    margin: 0;
+}
+
+%m-30 {
+    margin: 30px;
+}
+
+%mb-0 {
+    margin-bottom: 0px;
+}
+
+%mb-10 {
+    margin-bottom: 10px;
+}
+
+%mb-25 {
+    margin-bottom: 25px;
+}
+
+%mt-10 {
+    margin-top: 10px;
+}
+
+%ml-0 {
+    margin-left: 0;
+}
+
+%ml-5 {
+    margin-left: 5px;
+}
+
+%ml-10 {
+    margin-left: 10px;
+}
+
+%mr-0 {
+    margin-right: 0;
+}
+
+%mr-5 {
+    margin-right: 5px;
+}
+
+%mr-10 {
+    margin-right: 10px;
+}
+
+%mb-15 {
+    margin-bottom: 15px;
+}
+
+%mt-0 {
+    margin-top: 0;
+}
+
+%mt-15 {
+    margin-top: 15px;
+}
+
+%mt-25 {
+    margin-top: 25px;
+}
+
+%ml-15 {
+    margin-left: 15px;
+}
+
+%mr-15 {
+    margin-right: 15px;
+}
+
+%mb-20 {
+    margin-bottom: 20px;
+}
+
+%mt-20 {
+    margin-top: 20px;
+}
+
+%ml-20 {
+    margin-left: 20px;
+}
+
+%mr-20 {
+    margin-right: 20px;
+}
+
+%mb-0 {
+    margin-bottom: 0px;
+}
+%mb-5 {
+    margin-bottom: 5px;
+}
+
+%mb-30 {
+    margin-bottom: 30px;
+}
+
+%mb-30-none {
+    margin-bottom: -30px;
+}
+
+%mt-30 {
+    margin-top: 30px;
+}
+
+%ml-30 {
+    margin-left: 30px;
+}
+
+%mr-30 {
+    margin-right: 30px;
+}
+
+%my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+%my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+%my-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+%my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+%my-25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+%my-30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+%mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+%mx-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+%mx-15 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+%mx-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+%mx-25 {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+%mx-30 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
+%p-0 {
+    padding: 0;
+}
+%p-25 {
+    padding: 25px;
+}
+
+%p-5 {
+    padding: 5px;
+}
+
+%p-10 {
+    padding: 10px;
+}
+
+%p-15 {
+    padding: 15px;
+}
+
+%p-20 {
+    padding: 20px;
+}
+%p-20-10{
+    padding: 20px 10px;
+}
+
+%p-30 {
+    padding: 30px;
+}
+
+%pb-0 {
+    padding-bottom: 0;
+}
+
+%pb-5 {
+    padding-bottom: 5px;
+}
+
+%pb-10 {
+    padding-bottom: 10px;
+}
+
+%pt-0 {
+    padding-top: 0;
+}
+
+%pt-5 {
+    padding-top: 5px;
+}
+
+%pt-10 {
+    padding-top: 10px;
+}
+
+%pl-0 {
+    padding-left: 0;
+}
+
+%pl-5 {
+    padding-left: 5px;
+}
+
+%pl-10 {
+    padding-left: 10px;
+}
+
+%pl-20 {
+    padding-left: 20px;
+}
+
+%pr-5 {
+    padding-right: 5px;
+}
+
+%pr-10 {
+    padding-right: 10px;
+}
+
+%pb-15 {
+    padding-bottom: 15px;
+}
+
+%pt-15 {
+    padding-top: 15px;
+}
+
+%pl-15 {
+    padding-left: 15px;
+}
+
+%pr-15 {
+    padding-right: 15px;
+}
+
+%pb-20 {
+    padding-bottom: 20px;
+}
+
+%pt-20 {
+    padding-top: 20px;
+}
+
+%pl-20 {
+    padding-left: 20px;
+}
+
+%pr-20 {
+    padding-right: 20px;
+}
+
+%pb-30 {
+    padding-bottom: 30px;
+}
+
+%pt-30 {
+    padding-top: 30px;
+}
+
+%pl-30 {
+    padding-left: 30px;
+}
+
+%pr-30 {
+    padding-right: 30px;
+}
+
+
+// social-media color
+%facebook-color {
+    color: $facebook;
+}
+%twitter-color {
+    color: $twitter;
+}
+%linkedin-color {
+    color: $linkedin;
+}
+%skype-color {
+    color: $skype;
+}
+%youtube-color {
+    color: $youtube;
+}
+%google-color {
+    color: $google;
+}
+%camera-color {
+    color: $camera;
+}
+%instagram-color {
+    color: $instagram;
+}
+%tumblr-color {
+    color: $tumblr;
+}
+%behance-color {
+    color: $behance;
+}
+%dribbble-color {
+    color: $dribbble;
+}
+%star-color {
+    color: $star;
+}
+%green-color {
+    color: $green;
+}
+%red-color {
+    color: $red;
+}
+%yellow-color {
+    color: $yellow;
+}
+%nell-color {
+    color: $nell;
+}
+%navy-color {
+    color: $navy;
+}
+%plaseholder-color {
+    color: $plaseholder;
+}
+%pinterest-color  {
+    color: $pinterest;
+}
+%basketball-color  {
+    color: $basketball;
+}
+%globe-color  {
+    color: $globe;
+}
+%vimeo-color  {
+    color: $vimeo;
+}
+
+%bg-facebook {
+    background: $facebook;
+}
+%bg-twitter {
+    background: $twitter;
+}
+%bg-linkedin {
+    background: $linkedin;
+}
+%bg-skype {
+    background: $skype;
+}
+%bg-youtube {
+    background: $youtube;
+}
+%bg-google {
+    background: $google;
+}
+%bg-camera {
+    background: $camera;
+}
+%bg-instagram {
+    background: $instagram;
+}
+%bg-tumblr {
+    background: $tumblr;
+}
+%bg-behance {
+    background: $behance;
+}
+%bg-dribbble {
+    background: $dribbble;
+}
+%bg-star {
+    background: $star;
+}
+%bg-green {
+    background: $green;
+}
+%bg-red {
+    background: $red;
+}
+%bg-yellow {
+    background: $yellow;
+}
+%bg-nell {
+    background: $nell;
+}
+%bg-navy {
+    background: $navy;
+}
+%bg-plaseholder {
+    background: $plaseholder;
+}
+%bg-pinterest  {
+    background: $pinterest;
+}
+%bg-basketball  {
+    background: $basketball;
+}
+%bg-globe  {
+    background: $globe;
+}
+%bg-vimeo  {
+    background: $vimeo;
+}
+
+
+
+
+/* *****========= All Keyframes  ===============****** */
+
+@keyframes angle-move {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-6deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(8deg);
+    }
+}
+
+@keyframes up-down {
+
+    0%,
+    100% {
+        transform: translateY(-20px) translateX(15px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+@keyframes up_down_2 {
+
+    0%,
+    100% {
+        transform: translateY(15px) translateX(15px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+@keyframes up_down_3 {
+
+    0%,
+    100% {
+        transform: translateY(-10px) translateX(1px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom {
+
+    0%,
+    100% {
+        transform: scale(.9) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(30deg);
+    }
+
+    80% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg); 
+    } 
+}
+@keyframes rotate-rev {
+    100% {
+        transform: rotateZ(-360deg) translate(-50%, -50%); 
+    } 
+}
+@keyframes bounce-1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+//riple
+@keyframes ripple {
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+//rotate-2
+@keyframes rotate-2 {
+    100% {
+        transform: rotate(150deg);
+    }
+}
+
+@keyframes outer-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      -webkit-filter: alpha(opacity=50); }
+    80% {
+      transform: scale(1.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5); }
+    100% {
+      transform: scale(2.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+      -moz-transform: scale(2.5);
+      -ms-transform: scale(2.5);
+      -o-transform: scale(2.5); } 
+}
+@-webkit-keyframes outer-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1); }
+    80% {
+      transform: scale(2.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+      -moz-transform: scale(2.5);
+      -ms-transform: scale(2.5);
+      -o-transform: scale(2.5); }
+    100% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transform: scale(3.5);
+      -moz-transform: scale(3.5);
+      -ms-transform: scale(3.5);
+      -o-transform: scale(3.5); } 
+}
+@-moz-keyframes outer-ripple {
+    0% {
+      transform: scale(1);
+      filter: alpha(opacity=50);
+      opacity: 0.5;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1); }
+    80% {
+      transform: scale(2.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transform: scale(2.5);
+      -moz-transform: scale(2.5);
+      -ms-transform: scale(2.5);
+      -o-transform: scale(2.5); }
+    100% {
+      transform: scale(3.5);
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-transform: scale(3.5);
+      -moz-transform: scale(3.5);
+      -ms-transform: scale(3.5);
+      -o-transform: scale(3.5); } 
+}
+
+@keyframes pulse {
+    0% {
+        @include transform(translate(-50%, -50%)scale(1));
+        opacity: 1;
+    }
+    90% {
+        opacity: .5;
+        @include transform(translate(-50%, -50%)scale(1.8));
+    }
+    100% {
+        opacity: 0;
+        @include transform(translate(-50%, -50%)scale(2));
+    }
+}
+
+@-webkit-keyframes circle-2 {
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+
+@keyframes circle-2 {
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}

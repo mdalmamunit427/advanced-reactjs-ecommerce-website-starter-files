@@ -1,0 +1,345 @@
+/* @@@@@@@@@@@@@  Footer Section Start Here  @@@@@@@@@@@@@@ */
+footer {
+    &.style-2 {
+        .footer-top {
+            .footer-item {
+                .footer-inner {
+                    .footer-content {
+                        .title {
+                            @extend %mb-0;
+                            margin-top: -8px;
+                            @include breakpoint(sm) {
+                                margin-bottom: 15px;
+                            }
+                            h4 {
+                                @extend %title-color;
+                                &::after {
+                                    @extend %d-none;
+                                }
+                            }
+                        }
+                        .content {
+                            ul {
+                                li {
+                                    padding: 3px 0;
+                                    a {
+                                        @extend %title-color;
+                                        &:hover {
+                                            @extend %theme-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.our-address {
+                    .footer-inner {
+                        .footer-content {
+                            .content {
+                                p {
+                                    font-size: $fs-base;
+                                    @extend %desc-color;
+                                }
+                                ul {
+                                    li {
+                                        i {
+                                            @extend %mr-0;
+                                        }
+                                    }
+                                    &.office-address {
+                                        @extend %mb-15;
+                                        @extend %mt-10;
+                                        li {
+                                            padding: 2px 0;
+                                            font-weight: 500;
+                                            @extend %title-color;
+                                            i {
+                                                @extend %mr-10;
+                                                @extend %theme-color;
+                                            }
+                                        }
+                                    }
+                                    &.social-icons {
+                                        li {
+                                            a {
+                                                @include border-radius(3px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.twitter-post {
+                    .footer-inner {
+                        .footer-content {
+                            .content {
+                                ul {
+                                    li {
+                                        @extend %flex;
+                                        i {
+                                            @extend %mr-10;
+                                            font-size: $fs-h4;
+                                            @extend %twitter-color;
+                                            @include transform(translateY(10px));
+                                        }
+                                        p {
+                                            width: calc(100% - 35px);
+                                            font-size: $fs-base;
+                                            a {
+                                                @extend %theme-color;
+                                                @extend %d-inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+            &.dark-view {
+                @extend %bg-title;
+                * {
+                    color: #fff !important;
+                }
+            }
+        }
+        .footer-bottom {
+            @extend %bg-ash;
+            .section-wrapper {
+                @extend %flex;
+                @extend %justify-between;
+                @extend %align-items-center;
+                p {
+                    @extend %text-left;
+                    a {}
+                }
+                .footer-bottom-list {
+                    a {
+                        @extend %mr-15;
+                        &:last-child {
+                            @extend %mr-0;
+                        }
+                        &:hover {
+                            @extend %theme-color;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
+
+
+.footer-top {
+    .footer-item {
+        margin: 15px 0;
+        @include breakpoint(lg) {
+            margin: 0;
+        }
+        .footer-inner {
+            .footer-content {
+                .title {
+                    @extend %mb-30;
+                    margin-top: -8px;
+                    h4 {
+                        @extend %white-color;
+                        @extend %rel;
+                        &::after {
+                            @extend %abs;
+                            width: 50px;
+                            height: 2px;
+                            bottom: -15px;
+                            left: 0;
+                            @extend %bg-primary;
+                        }
+                    }
+                }
+                .content {
+                    ul {
+                        li {
+                            padding: 8px 0;
+                            a {
+                                @extend %white-color;
+                                i {
+                                    @extend %mr-10;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.our-address {
+            .footer-inner {
+                .footer-content {
+                    .title {}
+                    .content {
+                        p {
+                            @extend %white-color;
+                            @extend %mb-0;
+                        }
+                        ul {
+                            li {
+                                i {
+                                    @extend %white-color;
+                                    @extend %mr-10;
+                                    margin-top: 10px;
+                                }
+                                span {
+                                    @extend %white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    padding: 35px 0;
+    background: $white-color;
+    .section-wrapper {
+        p {
+            text-align: center;
+            margin-bottom: 0;
+            a {
+                padding: 5px;
+                font-weight: 600;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+.news-footer-wrap {
+    background: #1f1f33;
+    @extend %rel;
+    .fs-shape {
+        @include breakpoint(max-xxl) {
+            display: none;
+        }
+        img {
+            @extend %abs;
+            &.fst-1 {
+                top: 0;
+                left: -60px;
+            }
+            &.fst-2 {
+                bottom: 104px;
+                right: 0;
+            }
+        }
+    }
+}
+
+/* @@@@@@@@@@@@@  Newsletter Section Start Here  @@@@@@@@@@@@@@ */
+.news-letter {
+    padding: 60px 0;
+    .section-wrapper {
+        @extend %flex;
+        @extend %justify-center;
+        @extend %align-items-center;
+        @extend %text-center;
+        border-bottom: 1px solid #363648;
+        padding-bottom: 40px;
+        z-index: 1;
+        @extend %rel;
+        @include breakpoint(lg) {
+            margin-bottom: 40px;
+            padding-bottom: 60px;
+        }
+        @include breakpoint(xl) {
+            justify-content: space-between;
+            text-align: left;
+        }
+        .news-title {
+            @extend %w-100;
+            margin-bottom: 30px;
+            @include breakpoint(xl) {
+                width: 40%;
+                margin-bottom: 0;
+            }
+            h3 {
+                @extend %white-color;
+                @extend %m-0;
+            }
+        }
+        .news-form {
+            width: 100%;
+            @include breakpoint(xl) {
+                width: calc(100% - 50%);
+            }
+            form {
+                .nf-list {
+                    @extend %w-100;
+                    @extend %rel;
+                    @include breakpoint(sm) {
+                        background: $white-color;
+                    }
+                    &::after {
+                        @extend %abs;
+                        content: "\efb4";
+                        width: 30px;
+                        height: 30px;
+                        top: 18px;
+                        left: 10px;
+                        @extend %text-center;
+                        @extend %primary-color;
+                        font-size: $fs-h4;
+                        font-family: IcoFont!important;
+                        @include breakpoint(sm) {
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    input {
+                        @extend %mb-0;
+                        box-shadow: none;
+                        border: none;
+                        outline: none;
+                        &[type="email"] {
+                            padding: 20px;
+                            padding-left: 50px;
+                            width: 100%;
+                            @extend %bg-white;
+                            @include breakpoint(sm) {
+                                padding-right: 170px;
+                            }
+                            @include breakpoint(xl) {
+                                width: auto;
+                            }
+                        }
+                        &[type="submit"] {
+                            width: 200px;
+                            font-size: $fs-base;
+                            font-weight: 700;
+                            width: 162px;
+                            height: 54px;
+                            border: none;
+                            outline: none;
+                            @extend %white-color;
+                            margin-top: 20px;
+                            @extend %bg-primary;
+                            @extend %pointer;
+                            @include breakpoint(sm) {
+                                position: absolute;
+                                top: 50%;
+                                right: 5px;
+                                transform: translateY(-50%);
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

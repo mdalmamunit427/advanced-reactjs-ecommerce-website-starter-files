@@ -1,0 +1,77 @@
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+// Colors
+
+$title-color: #101115;
+$desc-color: #555555;
+$theme-color: #f16126;
+$primary-color:#26c976;
+$border-color: #ecf0f3;
+$white-color: #fff;
+$black-color:#000000;
+$ash-color: #f9f9f9;
+$bg-color:#f5f9ff;
+$body-color:#391965;
+$grey-color:#555555;
+$shadow-color: #888888;
+
+// social-media color
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #007bb5;
+$skype: #2fb7df;
+$youtube: #cd201f;
+$google: #dd4b39;
+$camera: #e4405f;
+$instagram: #e4405f;
+$tumblr: #34465d;
+$behance: #1769ff;
+$dribbble:#ea4c89;
+$star: #e9ba17;
+$green: #0be881;
+$red: #f53b57;
+$yellow: #ffdf40;
+$nell: #212fb4;
+$navy: #d8e0f3;
+$plaseholder: #a0a6bc;
+$pinterest : #bd081c;
+$basketball : #e94c89;
+$globe : #ff5e9c;
+$vimeo : #3b5998;
+//== Typography
+
+
+//Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// font-family
+$font-b: 'Barlow', sans-serif;
+
+// font-size
+$fs-base: 1rem !default;
+$fs-large: 1rem; //16px;
+$fs-small: 0.875rem; //14px
+$fs-h1: 3.75rem; //60px;
+$fs-h2: 2.5rem; //40px;	
+$fs-h3: 1.875rem; //30px;		
+$fs-h4: 1.5rem; //24px;	
+$fs-h5: 1.25rem; //20px;		
+$fs-h6: 1.125rem; //18px;		
+
+// heading line height
+$lh-h1: 72px;
+$lh-h2: 42px;
+$lh-h3: 48px;
+$lh-h4: 32px;
+$lh-h5: 24px;
+$lh-h6: 26px;
+
+// Description line height
+$lh-p: 24px;
+
+//  transition
+$transition: all 0.3s ease;
