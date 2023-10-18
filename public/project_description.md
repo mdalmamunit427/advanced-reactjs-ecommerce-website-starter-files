@@ -108,7 +108,7 @@ const desc = "Take courses on your any device with our app & learn all time what
 
 const title = "Our Products";
 
-const CourseData = [
+const ProductData = [
 {
 imgUrl: 'src/assets/images/categoryTab/01.jpg',
 cate: 'Shoes',
