@@ -731,6 +731,10 @@ input::-webkit-inner-spin-button {
 }
 
   -----modal css end -----------
+  **/__ Image URL for Credit Card and Paypal __/**
+  
+  paypal: https://i.imgur.com/yK7EDD1.png
+  creditCard: https://i.imgur.com/sB4jftM.png
 
 ## 4. All Texts for Blog Page
 
